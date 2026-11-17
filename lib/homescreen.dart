@@ -29,10 +29,7 @@ class _NotesState extends State<Notes> {
     });
   }
 
-  /*String selectedCategory1 = 'Home';
-  String selectedCategory2 = 'Recent';
-  String selectedCategory3 = 'Work';
-  String selectedCategory4 = 'Favourite';*/
+  
 
   String selectedCategory = 'Home';
 
