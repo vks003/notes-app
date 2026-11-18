@@ -12,6 +12,7 @@ class Notes extends StatefulWidget {
 }
 
 class _NotesState extends State<Notes> {
+  @override
   void initState() {
     super.initState();
 
@@ -29,9 +30,7 @@ class _NotesState extends State<Notes> {
     });
   }
 
-  
-
-  String selectedCategory = 'Home';
+  String selectedCategory = 'Recent';
 
   TextEditingController titleController = TextEditingController();
   TextEditingController descriptionController = TextEditingController();
@@ -413,9 +412,13 @@ class _NotesState extends State<Notes> {
                                   });
                                 } else if (value == 'favourite') {
                                   setState(() {
-                                    notesList[actualIndex]['isFavourite'] =
+                                    /*notesList[actualIndex]['isFavourite'] =
                                         !(notesList[actualIndex]['isFavourite']
-                                            as bool);
+                                            as bool);*/
+                                    notesList[actualIndex]['isFavourite'] =
+                                        (notesList[actualIndex]['isFavourite'] ??
+                                            false) ==
+                                        false;
                                   });
 
                                   SharedPreferences.getInstance().then((prefs) {
