@@ -454,6 +454,7 @@ class _NotesState extends State<Notes> {
       ),
 
       //................add note button................
+      
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.deepPurple,
         foregroundColor: Colors.white,
@@ -474,6 +475,8 @@ class _NotesState extends State<Notes> {
               return StatefulBuilder(
                 builder: (context, setDialogState) {
                   return AlertDialog(
+                    scrollable: true,
+
                     title: const Text('Add New Note'),
 
                     content: Column(
